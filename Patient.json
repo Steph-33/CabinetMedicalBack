@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "631750f8c5a4a39de3040c26"
+  },
+  "dateNaissance": "05/09/1990",
+  "sexe": "F",
+  "adresse": "Plailly",
+  "numeroSecu": "132456789 10",
+  "nomPatient": "Monce",
+  "prenomPatient": "Cecile"
+},{
+  "_id": {
+    "$oid": "63175189c5a4a39de3040c27"
+  },
+  "dateNaissance": "10/04/1991",
+  "sexe": "F",
+  "adresse": "Bezannes",
+  "numeroSecu": "987654321 89",
+  "nomPatient": "Wall",
+  "prenomPatient": "Maud"
+},{
+  "_id": {
+    "$oid": "631751d2c5a4a39de3040c28"
+  },
+  "dateNaissance": "23/08/2005",
+  "sexe": "M",
+  "adresse": "Toulouse",
+  "numeroSecu": "987123546 45",
+  "nomPatient": "Broche",
+  "prenomPatient": "Valentin"
+},{
+  "_id": {
+    "$oid": "63175200c5a4a39de3040c29"
+  },
+  "dateNaissance": "28/03/2001",
+  "sexe": "F",
+  "adresse": "Libourne",
+  "numeroSecu": "645697132 45",
+  "nomPatient": "Follo",
+  "prenomPatient": "Margot"
+}]
