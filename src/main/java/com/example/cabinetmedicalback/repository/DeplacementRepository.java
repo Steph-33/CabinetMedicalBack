@@ -1,4 +1,10 @@
 package com.example.cabinetmedicalback.repository;
 
-public interface DeplacementRepository {
+import com.example.cabinetmedicalback.DAO.DeplacementDAO;
+import org.springframework.stereotype.Repository;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+@Repository
+public interface DeplacementRepository extends MongoRepository<DeplacementDAO, String>{
+
 }
