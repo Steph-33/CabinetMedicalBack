@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PatientRepository extends MongoRepository<PatientDAO, String> {
+
+    PatientDAO getPatientByNomPatient(String nomPatient);
 }

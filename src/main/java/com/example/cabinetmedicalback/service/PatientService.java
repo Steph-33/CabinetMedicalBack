@@ -34,12 +34,21 @@ public class PatientService {
     }
 
     /**
-     * Return a patient from the id
+     * Return a patient by the id
      * @param id
      * @return The patient found
      */
     public PatientDAO getPatientById(String id) {
         return (this.repo.findById(id).get());
+    }
+
+    /**
+     * Return a patient by the name
+     * @param name
+     * @return
+     */
+    public PatientDAO getPatientByNomPatient(String name) {
+        return(this.repo.getPatientByNomPatient(name));
     }
 
     /**
@@ -82,6 +91,5 @@ public class PatientService {
         this.repo.save(itemToDelete);
     }
 
-
-
+    
 }
