@@ -6,7 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/deplacements")
 public class DeplacementController {
     private DeplacementService service;
@@ -15,6 +18,21 @@ public class DeplacementController {
     public DeplacementController(DeplacementService service){
         this.service = service;
     }
+
+    @GetMapping("/{id}")
+    @ResponseStatus(code = HttpStatus.OK)
+    public List<DeplacementDAO> getDeplacementPatient(@PathVariable String id){
+        return service.getDeplacementByPatient(id);
+    }
+
+    @GetMapping("/{idPatient}/{idInfirmier}")
+    @ResponseStatus(code = HttpStatus.OK)
+    public List<DeplacementDAO> getDeplacementPatientAndInfirmier(@PathVariable String idPatient, @PathVariable String idInfirmier){
+        return service.getDeplacementByPatientAndInfirmier(idPatient, idInfirmier);
+    }
+
+
+
 
     @PostMapping("")
     @ResponseStatus(code = HttpStatus.OK)
