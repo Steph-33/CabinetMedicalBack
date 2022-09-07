@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/patients")
 public class PatientController {
 
@@ -31,6 +32,12 @@ public class PatientController {
         return(this.service.getPatientById(id));
     }
 
+    @GetMapping("/name/{name}")
+    @ResponseStatus(code = HttpStatus.OK)
+    public PatientDAO getPatientByName(@PathVariable String name) {
+        return(this.service.getPatientByNomPatient(name));
+    }
+
     @PostMapping("")
     @ResponseStatus(code = HttpStatus.OK)
     public PatientDAO createPatient(@RequestBody PatientDAO newPatient) {
@@ -43,10 +50,10 @@ public class PatientController {
         this.service.deletePatient(id);
     }
 
-    /*
-    TODO
-    Update a patient
-     */
-
+    @PatchMapping("/update/{id}")
+    @ResponseStatus(code = HttpStatus.OK)
+    public PatientDAO updatePatient(@PathVariable String id, @RequestBody PatientDAO item) {
+        return(this.service.updatePatient(id, item));
+    }
 
 }

@@ -2,13 +2,8 @@ spring:
   data:
     mongodb:
       port: 27017
-<<<<<<< HEAD
-      host : localhost
-      database : CabinetMedical
-=======
       host: localhost
       database: CabinetMedical
 
 server:
   port: 8080
->>>>>>> fbbb424 (Add controller, service, dao and repository for Patient)

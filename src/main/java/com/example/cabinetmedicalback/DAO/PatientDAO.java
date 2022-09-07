@@ -10,19 +10,16 @@ public class PatientDAO {
 
     @Id
     private String id;
-
     private String nomPatient;
-
     private String prenomPatient;
-
     private String dateNaissance;
-
     private String sexe;
-
     private String adresse;
-
     private String numeroSecu;
-
     private boolean active;
+    // @DBRef
+    // private Infirmier infirmier;
+
+
 
 }
