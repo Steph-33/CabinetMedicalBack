@@ -1,28 +1,32 @@
 [{
   "_id": {
-    "$oid": "6317517d6696de23829bdff9"
+    "$oid": "63184cb1962ca7b9eb2a5b13"
   },
   "nom": "Durant",
   "prenom": "Pascal",
-  "tel_pro": "0600010203",
-  "tel_mobile": "0601040809",
-  "tel_fixe": "0387098565"
+  "telPro": "0645897895",
+  "telMobile": "0605416364",
+  "telFixe": "0345897426",
+  "active": true,
+  "_class": "com.example.cabinetmedicalback.DAO.InfirmierDAO"
 },{
   "_id": {
-    "$oid": "631752276696de23829bdffa"
-  },
-  "nom": "Moulin",
-  "prenom": "Joseph",
-  "tel_pro": "0601085643",
-  "tel_mobile": "0687895645",
-  "tel_fixe": "0385264896"
-},{
-  "_id": {
-    "$oid": "631752b76696de23829bdffb"
+    "$oid": "63184cc4962ca7b9eb2a5b14"
   },
   "nom": "Mercier",
   "prenom": "Monique",
-  "tel_pro": "0678540363",
-  "tel_mobile": "0645652515",
-  "tel_fixe": "0335697416"
+  "active": true,
+  "telFixe": "0335697416",
+  "telMobile": "0645652515",
+  "telPro": "0678540363"
+},{
+  "_id": {
+    "$oid": "63184cd4962ca7b9eb2a5b15"
+  },
+  "nom": "Moulin",
+  "prenom": "Joseph",
+  "active": true,
+  "telFixe": "0385264896",
+  "telMobile": "0687895645",
+  "telPro": "0601085643"
 }]
