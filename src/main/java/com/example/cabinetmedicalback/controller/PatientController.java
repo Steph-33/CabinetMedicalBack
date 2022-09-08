@@ -50,6 +50,12 @@ public class PatientController {
         this.service.deletePatient(id);
     }
 
+    @PatchMapping("/active/{id}")
+    @ResponseStatus(code = HttpStatus.OK)
+    public void activatePatient(@PathVariable String id) {
+        this.service.activatePatient(id);
+    }
+
     @PatchMapping("/update/{id}")
     @ResponseStatus(code = HttpStatus.OK)
     public PatientDAO updatePatient(@PathVariable String id, @RequestBody PatientDAO item) {
