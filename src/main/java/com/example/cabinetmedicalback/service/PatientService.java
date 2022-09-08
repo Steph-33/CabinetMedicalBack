@@ -83,12 +83,25 @@ public class PatientService {
     /**
      * Delete a patient
      * Consist in changing the patient from active to inactive
+     * active = false
      * @param id
      */
     public void deletePatient(String id) {
         PatientDAO itemToDelete = this.repo.findById(id).get();
         itemToDelete.setActive(false);
         this.repo.save(itemToDelete);
+    }
+
+    /**
+     * Activate a patient
+     * Consist in changing the patient from inactive to active
+     * active = true
+     * @param id
+     */
+    public void activatePatient(String id) {
+        PatientDAO itemToActivate = this.repo.findById(id).get();
+        itemToActivate.setActive(true);
+        this.repo.save(itemToActivate);
     }
 
 
