@@ -19,6 +19,12 @@ public class DeplacementController {
         this.service = service;
     }
 
+    @GetMapping("")
+    @ResponseStatus(code = HttpStatus.OK)
+    public List<DeplacementDAO> getAllDeplacements(){
+        return service.getAllDeplacements();
+    }
+
     @GetMapping("/{id}")
     @ResponseStatus(code = HttpStatus.OK)
     public List<DeplacementDAO> getDeplacementPatient(@PathVariable String id){
@@ -30,9 +36,6 @@ public class DeplacementController {
     public List<DeplacementDAO> getDeplacementPatientAndInfirmier(@PathVariable String idPatient, @PathVariable String idInfirmier){
         return service.getDeplacementByPatientAndInfirmier(idPatient, idInfirmier);
     }
-
-
-
 
     @PostMapping("")
     @ResponseStatus(code = HttpStatus.OK)
