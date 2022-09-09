@@ -76,7 +76,7 @@ public class PatientService {
         itemToUpdate.setSexe(item.getSexe());
         itemToUpdate.setAdresse(item.getAdresse());
         itemToUpdate.setNumeroSecu(item.getNumeroSecu());
-        itemToUpdate.setInfirmer(item.getInfirmer());
+        itemToUpdate.setInfirmier(item.getInfirmier());
 
         return(this.repo.save(itemToUpdate));
     }
