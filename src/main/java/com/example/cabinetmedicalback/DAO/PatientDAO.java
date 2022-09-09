@@ -19,5 +19,5 @@ public class PatientDAO {
     private String numeroSecu;
     private boolean active;
     @DBRef
-    private InfirmierDAO infirmer;
+    private InfirmierDAO infirmier;
 }
