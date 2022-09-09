@@ -1,6 +1,7 @@
 package com.example.cabinetmedicalback.service;
 
 import com.example.cabinetmedicalback.DAO.InfirmierDAO;
+import com.example.cabinetmedicalback.DAO.PatientDAO;
 import com.example.cabinetmedicalback.repository.InfirmierRepository;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -78,6 +79,18 @@ public class InfirmierService {
         itemToUpdate.setTelFixe(item.getTelFixe());
 
         return(this.repo.save(itemToUpdate));
+    }
+
+    /**
+     * Activate an infirmier
+     * Consist in changing the patient from inactive to active
+     * active = true
+     * @param id
+     */
+    public void activateInfirmier(String id) {
+        InfirmierDAO itemToActivate = this.repo.findById(id).get();
+        itemToActivate.setActive(true);
+        this.repo.save(itemToActivate);
     }
 
     /**

@@ -51,6 +51,12 @@ public class InfirmierController {
         return(this.service.updateInfirmier(id, item));
     }
 
+    @PatchMapping("/active/{id}")
+    @ResponseStatus(code = HttpStatus.OK)
+    public void activateInfirmier(@PathVariable String id) {
+        this.service.activateInfirmier(id);
+    }
+
     @PatchMapping("/{id}")
     @ResponseStatus(code = HttpStatus.OK)
     public void deleteInfirmier(@PathVariable String id) {
