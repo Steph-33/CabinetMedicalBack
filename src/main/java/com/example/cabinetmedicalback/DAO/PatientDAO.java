@@ -18,4 +18,6 @@ public class PatientDAO {
     private String adresse;
     private String numeroSecu;
     private boolean active;
+    @DBRef
+    private InfirmierDAO infirmer;
 }
