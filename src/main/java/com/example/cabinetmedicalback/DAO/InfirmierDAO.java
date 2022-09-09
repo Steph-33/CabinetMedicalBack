@@ -16,5 +16,4 @@ public class InfirmierDAO {
     private String telMobile;
     private String telFixe;
     private boolean active;
-
 }
