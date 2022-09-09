@@ -9,6 +9,9 @@ import java.util.List;
 
 @Repository
 public interface DeplacementRepository extends MongoRepository<DeplacementDAO, String>{
+
+    @Override
+    List<DeplacementDAO> findAll();
     List<DeplacementDAO> findAllByPatient(String id);
     List<DeplacementDAO> findAllByPatientAndInfirmier(String idPatient, String idInfirmier);
 }

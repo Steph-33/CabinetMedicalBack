@@ -17,6 +17,9 @@ public class DeplacementService {
         this.repo = repo;
     }
 
+    public List<DeplacementDAO> getAllDeplacements(){
+        return this.repo.findAll();
+    }
     public List<DeplacementDAO> getDeplacementByPatient(String id){
         return this.repo.findAllByPatient(id);
     }
